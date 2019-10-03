@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "@bazel/ibazel": "^0.9.1",
+    "@bazel/typescript": "^0.32.2",
+    "@types/es6-shim": "^0.31.37",
+    "@types/glob": "^7.1.1",
+    "@types/js-beautify": "^1.8.1",
+    "@types/next": "^7.0.5",
+    "@types/node": "^9.6.47",
+    "@types/react": "^16.9.4",
+    "@zeit/next-typescript": "^1.1.1",
+    "apisauce": "^1.1.1",
+    "axios": "^0.19.0",
+    "lodash.get": "^4.4.2",
+    "next": "^8.0.4",
+    "prettier": "^1.14.2",
+    "protobufjs": "^6.8.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "ts-loader": "^5.3.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.5.1",
+    "umd-compat-loader": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/lodash.get": "^4.4.6",
+    "@types/styled-jsx": "^2.2.8"
+  }
+}

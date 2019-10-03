@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+
+EXCLUDE_PATTERNS = [
+    ".next/**",
+    "out/**",
+]
+
+load("//tools:next_site.bzl", "next_site")
+
+next_site(
+    name = "docs",
+    srcs = glob(
+        ["**/*.*"],
+        exclude = EXCLUDE_PATTERNS,
+    ),
+    data = [
+        "//:package.json",
+        "//:tsconfig.json",
+        "//components",
+        "//context",
+        "//libs/api-service:api-service-ts",
+        "@npm//@zeit/next-typescript",
+        "@npm//tsconfig-paths-webpack-plugin",
+        "@npm//umd-compat-loader",
+    ],
+    port = 3001,
+    site_path = "docs",
+)

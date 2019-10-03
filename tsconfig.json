@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "mono/*": ["*", "bazel-bin/*", "bazel-genfiles/*"],
+      "@mono/*": ["*", "bazel-bin/*", "bazel-genfiles/*"]
+    },
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es6",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["es2017", "dom"]
+  },
+  "exclude": ["bazel-*", "node_modules"]
+}
