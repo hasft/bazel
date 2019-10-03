@@ -79,31 +79,3 @@ http_archive(
 load("@com_github_bazelbuild_buildtools//buildifier:deps.bzl", "buildifier_dependencies")
 
 buildifier_dependencies()
-
-# Docker base images.
-
-# http_archive(
-#     name = "io_bazel_rules_docker",
-#     sha256 = "3556d4972571f288f8c43378295d84ed64fef5b1a875211ee1046f9f6b4258fa",
-#     strip_prefix = "rules_docker-0.8.0",
-#     urls = ["https://github.com/bazelbuild/rules_docker/archive/v0.8.0.tar.gz"],
-# )
-
-# load(
-#     "@io_bazel_rules_docker//repositories:repositories.bzl",
-#     container_repositories = "repositories",
-# )
-
-# container_repositories()
-
-# load(
-#     "@io_bazel_rules_docker//container:container.bzl",
-#     "container_pull",
-# )
-
-# container_pull(
-#     name = "nginx_base",
-#     digest = "sha256:8c3cdb5acd050a5a46be0bb5637e23d192f4ef010b4fb6c5af40e45c5b7a0a71",
-#     registry = "index.docker.io",
-#     repository = "library/nginx",
-# )
