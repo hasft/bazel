@@ -1,3 +1,4 @@
+# build --symlink_prefix=dist/
 build --test_output=errors --action_env="GTEST_COLOR=1"
 
 # TODO: Fix all the underlying issues here.
