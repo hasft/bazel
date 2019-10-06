@@ -1,12 +1,5 @@
-import * as React from "react";
+import Text from "mono/components/primitive/text/index.tsx";
+import Logo from "mono/components/common/logo/index.tsx";
+import Header from "mono/components/common/header/index.tsx";
 
-type TextProps = {
-  a?: number;
-};
-
-const Text = (props: TextProps) => {
-  const { a } = props;
-  return <div>Text {a}</div>;
-};
-
-export { Text };
+export { Text, Logo, Header };

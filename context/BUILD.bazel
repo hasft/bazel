@@ -3,11 +3,11 @@ package(default_visibility = ["//visibility:public"])
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
 
 ts_library(
-    name = "context-ts",
+    name = "context",
     srcs = glob(["**/*.tsx"]) + glob(["**/*.ts"]),
     module_name = "@mono/context",
     deps = [
-        "//libs/api-service:api-service-ts",
+        "//libs/api-service",
         "@npm//react",
         "@npm//@types/react",
         "@npm//react-dom",
@@ -21,8 +21,8 @@ ts_library(
 load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 
 nodejs_binary(
-    name = "context",
-    data = [":context-ts"],
+    name = "bin",
+    data = [":context"],
     entry_point = ":index.ts"
 )
 
