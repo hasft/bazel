@@ -7,7 +7,7 @@ ts_library(
     srcs = glob(["**/*.tsx"]) + glob(["**/*.ts"]),
     module_name = "@mono/context",
     deps = [
-        "//libs/api-service:api-service-ts",
+        "//libs/api-service",
         "@npm//react",
         "@npm//@types/react",
         "@npm//react-dom",

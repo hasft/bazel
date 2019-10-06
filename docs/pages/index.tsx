@@ -1,27 +1,29 @@
 import * as React from "react";
 import Service from "@mono/libs/api-service";
-import { Text } from "@mono/components";
-import { NextContext } from "next";
-import Header from "../src/components/common/header/index.tsx";
+import { Text, Header, Logo } from "@mono/components";
 
-type HomeProps = {};
+type HomeProps = {
+  b: number;
+};
 
 export type AuthConfig = {
   authURL: "";
 };
 
 class Home extends React.Component<HomeProps> {
-  static async getInitialProps(ctx: NextContext) {
+  static async getInitialProps() {
     const service = new Service({ services: { account: { url: "/" } } });
     service.createMdsService();
-    return { b: 3 };
+    return { b: 8 };
   }
 
   render() {
     return (
       <div>
         <Header />
-        <Text a={3} />
+        <Logo image="something" />
+        <Text a={2} />
+        <p>sdasda {this.props.b}</p>
       </div>
     );
   }
