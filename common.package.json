@@ -1,18 +1,7 @@
 {
   "version": "$DF_VERSION",
-  "homepage": "https://github.com/dataform-co/dataform",
   "license": "MIT",
-  "keywords": [
-    "dataform",
-    "etl",
-    "data-pipeline",
-    "big-data",
-    "data-modelling",
-    "sql",
-    "bigquery",
-    "redshift",
-    "dataops"
-  ],
+  "keywords": ["ecommerce"],
   "publishConfig": {
     "access": "public"
   }

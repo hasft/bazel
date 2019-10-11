@@ -26,3 +26,13 @@ next_site(
     port = 3001,
     site_path = "docs",
 )
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+
+container_image(
+    name = "image",
+    base = "//tools/nginx/static",
+    directory = "/usr/share/nginx/html",
+    tars = [":docs_pkg"],
+)
+
