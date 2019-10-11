@@ -3,52 +3,31 @@ import { create } from "apisauce";
 import { AxiosInstance } from "axios";
 
 type ServiceURL = {
-  [name: string]: {
-    url: string;
-  };
+  [name: string]: any;
 };
 
+type Config = {};
 type Options = {};
 
 type Arg = {
   services: ServiceURL;
+  config: Config;
   options?: Options;
 };
 
 class Service {
   options: Options;
+  config: Config;
   services: ServiceURL;
-  mdsApi: any;
-  thorApi: any;
 
-  constructor(options: Arg) {
-    this.options = options;
-    this.services = options.services;
-    this.mdsApi = {};
-    this.thorApi = {};
+  constructor(arg: Arg) {
+    this.services = arg.services;
+    this.config = arg.config;
+    this.options = arg.options;
   }
 
-  createMdsService = () => {
-    console.log(this.services);
-  };
-
-  createThorService = () => {
-    console.log(this.services);
-  };
-
-  getMdsService = name => {
-    return this.mdsApi[name];
-  };
-
-  getThorService = name => {
-    return this.thorApi[name];
-  };
-
-  getAllService = () => {
-    return {
-      thorApi: this.thorApi,
-      mdsApi: this.mdsApi
-    };
+  create = () => {
+    return this.services;
   };
 }
 

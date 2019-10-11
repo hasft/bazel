@@ -12,8 +12,23 @@ export type AuthConfig = {
 
 class Home extends React.Component<HomeProps> {
   static async getInitialProps() {
-    const service = new Service({ services: { account: { url: "/" } } });
-    service.createMdsService();
+    const mdsService = new Service({
+      services: { banner: { url: "/" }, promo: { url: "/" } },
+      config: {}
+    });
+
+    const thorService = new Service({
+      services: { account: { url: "/" } },
+      config: {}
+    });
+
+    const api = {
+      mdsApi: mdsService.create(),
+      thorService: thorService.create()
+    };
+
+    console.log(api.mdsApi, api.thorService);
+
     return { b: 8 };
   }
 

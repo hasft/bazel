@@ -6,5 +6,5 @@ isolated development environment using podman / multi-stage environment
 4. 
 
 ## todos
-- [ ] 
+- [ ] build docker image 
 - [ ] 
