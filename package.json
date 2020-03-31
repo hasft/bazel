@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "glob": "^7.1.4",
     "lodash.get": "^4.4.2",
-    "next": "^8.0.4",
+    "next": "^9.3.2",
     "prettier": "^1.14.2",
     "protobufjs": "^6.8.8",
     "react": "^16.6.3",
